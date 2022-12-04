@@ -9,6 +9,14 @@ An `onlinecourse` app has already been provided in this repo upon which you will
 - You may choose any cloud platform for deployment (default is IBM Cloud Foundry)
 - Depends on your deployment, you may choose any SQL database Django supported such as SQLite3, PostgreSQL, and MySQL (default is SQLite3)
 
+Local setup
+- Install Packages: python3 -m pip install -U -r requirements.txt  
+- Install DJANGO: 
+- Trigger Migrations: python3 manage.py makemigrations 
+                      python3 manage.py migrate
+
+- Run Server: python3 manage.py runserver 
+
 **ER Diagram**
 For your reference, we have prepared the ER diagram design for the new assesement feature.
 
