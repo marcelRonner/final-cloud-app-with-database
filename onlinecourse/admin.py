@@ -26,14 +26,21 @@ class CourseAdmin(admin.ModelAdmin):
 class LessonAdmin(admin.ModelAdmin):
     list_display = ['title']
 
+class QuestionAdmin(admin.ModelAdmin):
+    inlines = [ChoiceInline]
+    list_display = ['question_text']
+
+class ChoiceAdmin(admin.ModelAdmin):
+    list_display = ['choice']
+
 # <HINT> Register Question and Choice models here
 
 admin.site.register(Course, CourseAdmin)
 admin.site.register(Lesson, LessonAdmin)
 admin.site.register(Instructor)
 admin.site.register(Learner)
-admin.site.register(Choice)
-admin.site.register(Question)
+admin.site.register(Choice, ChoiceAdmin)
+admin.site.register(Question, QuestionAdmin)
 
 # <HINT> Create Super-User for admin Site
 # python3 manage.py createsuperuser
