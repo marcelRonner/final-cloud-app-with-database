@@ -106,7 +106,7 @@ class Question(models.Model):
     # question grade/mark
     lesson= models.ForeignKey(Lesson ,on_delete=models.CASCADE)
     question_text = models.CharField(max_length=200 ,default="Question")
-    grad = models.FloatField(default=5.0)
+    grade = models.FloatField(default=5.0)
     course = models.ManyToManyField(Course)
 
     # <HINT> A sample model method to calculate if learner get the score of the question
